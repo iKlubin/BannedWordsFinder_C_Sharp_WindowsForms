@@ -36,24 +36,27 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.buttonTarget = new System.Windows.Forms.Button();
             this.buttonCopy = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.buttonStop = new System.Windows.Forms.Button();
+            this.buttonPause = new System.Windows.Forms.Button();
+            this.buttonResume = new System.Windows.Forms.Button();
+            this.listBoxReport = new System.Windows.Forms.ListBox();
+            this.buttonReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxTargetFolder
             // 
-            this.textBoxTargetFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.textBoxTargetFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxTargetFolder.Location = new System.Drawing.Point(12, 12);
             this.textBoxTargetFolder.Name = "textBoxTargetFolder";
-            this.textBoxTargetFolder.Size = new System.Drawing.Size(450, 44);
+            this.textBoxTargetFolder.Size = new System.Drawing.Size(450, 39);
             this.textBoxTargetFolder.TabIndex = 0;
             // 
             // textBoxCopyFolder
             // 
-            this.textBoxCopyFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.textBoxCopyFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxCopyFolder.Location = new System.Drawing.Point(610, 12);
             this.textBoxCopyFolder.Name = "textBoxCopyFolder";
-            this.textBoxCopyFolder.Size = new System.Drawing.Size(542, 44);
+            this.textBoxCopyFolder.Size = new System.Drawing.Size(542, 39);
             this.textBoxCopyFolder.TabIndex = 1;
             // 
             // buttonLoad
@@ -113,22 +116,66 @@
             this.buttonCopy.UseVisualStyleBackColor = true;
             this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
             // 
-            // dataGridView
+            // buttonStop
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(610, 130);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 62;
-            this.dataGridView.RowTemplate.Height = 28;
-            this.dataGridView.Size = new System.Drawing.Size(676, 708);
-            this.dataGridView.TabIndex = 8;
+            this.buttonStop.Location = new System.Drawing.Point(610, 62);
+            this.buttonStop.Name = "buttonStop";
+            this.buttonStop.Size = new System.Drawing.Size(218, 60);
+            this.buttonStop.TabIndex = 9;
+            this.buttonStop.Text = "buttonStop";
+            this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
+            // 
+            // buttonPause
+            // 
+            this.buttonPause.Location = new System.Drawing.Point(834, 62);
+            this.buttonPause.Name = "buttonPause";
+            this.buttonPause.Size = new System.Drawing.Size(223, 60);
+            this.buttonPause.TabIndex = 10;
+            this.buttonPause.Text = "buttonPause";
+            this.buttonPause.UseVisualStyleBackColor = true;
+            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
+            // 
+            // buttonResume
+            // 
+            this.buttonResume.Location = new System.Drawing.Point(1063, 62);
+            this.buttonResume.Name = "buttonResume";
+            this.buttonResume.Size = new System.Drawing.Size(223, 60);
+            this.buttonResume.TabIndex = 11;
+            this.buttonResume.Text = "buttonResume";
+            this.buttonResume.UseVisualStyleBackColor = true;
+            this.buttonResume.Click += new System.EventHandler(this.buttonResume_Click);
+            // 
+            // listBoxReport
+            // 
+            this.listBoxReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.listBoxReport.FormattingEnabled = true;
+            this.listBoxReport.ItemHeight = 25;
+            this.listBoxReport.Location = new System.Drawing.Point(607, 130);
+            this.listBoxReport.Name = "listBoxReport";
+            this.listBoxReport.Size = new System.Drawing.Size(679, 704);
+            this.listBoxReport.TabIndex = 12;
+            // 
+            // buttonReport
+            // 
+            this.buttonReport.Location = new System.Drawing.Point(468, 62);
+            this.buttonReport.Name = "buttonReport";
+            this.buttonReport.Size = new System.Drawing.Size(136, 60);
+            this.buttonReport.TabIndex = 13;
+            this.buttonReport.Text = "Report";
+            this.buttonReport.UseVisualStyleBackColor = true;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1298, 885);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.buttonReport);
+            this.Controls.Add(this.listBoxReport);
+            this.Controls.Add(this.buttonResume);
+            this.Controls.Add(this.buttonPause);
+            this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonCopy);
             this.Controls.Add(this.buttonTarget);
             this.Controls.Add(this.progressBar);
@@ -140,7 +187,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,7 +202,11 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button buttonTarget;
         private System.Windows.Forms.Button buttonCopy;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button buttonStop;
+        private System.Windows.Forms.Button buttonPause;
+        private System.Windows.Forms.Button buttonResume;
+        private System.Windows.Forms.ListBox listBoxReport;
+        private System.Windows.Forms.Button buttonReport;
     }
 }
 
